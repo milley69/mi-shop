@@ -2,5 +2,134 @@
   "profile": {
     "login": "admin",
     "password": "1234"
-  }
+  },
+  "categories": [
+    {
+      "id": 0,
+      "name": "Смартфоны",
+      "preview": "/images/phones/preview.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Аксессуары",
+      "preview": "/images/accessory/preview.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Умные устройства",
+      "preview": "/images/usage/preview.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": 0,
+      "category": 0,
+      "categoryName": "Смартфон",
+      "preview": "./images/phones/phone-1.jpg",
+      "price": 4990,
+      "name": "Xiaomi Redmi A1+ 2/32GB (голубой)"
+    },
+    {
+      "id": 1,
+      "category": 0,
+      "categoryName": "Смартфон",
+      "preview": "./images/phones/phone-1.jpg",
+      "price": 4990,
+      "name": "Xiaomi Redmi A1+ 2/32GB (голубой)"
+    },
+    {
+      "id": 2,
+      "category": 0,
+      "categoryName": "Смартфон",
+      "preview": "./images/phones/phone-1.jpg",
+      "price": 4990,
+      "name": "Xiaomi Redmi A1+ 2/32GB (голубой)"
+    },
+    {
+      "id": 3,
+      "category": 0,
+      "categoryName": "Смартфон",
+      "preview": "./images/phones/phone-1.jpg",
+      "price": 4990,
+      "name": "Xiaomi Redmi A1+ 2/32GB (голубой)"
+    },
+    {
+      "id": 4,
+      "category": 1,
+      "categoryName": "Чехол",
+      "preview": "./images/accessory/accessory-1.jpg",
+      "price": 290,
+      "name": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)"
+    },
+    {
+      "id": 5,
+      "category": 1,
+      "categoryName": "Чехол",
+      "preview": "./images/accessory/accessory-1.jpg",
+      "price": 290,
+      "name": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)"
+    },
+    {
+      "id": 6,
+      "category": 1,
+      "categoryName": "Чехол",
+      "preview": "./images/accessory/accessory-1.jpg",
+      "price": 290,
+      "name": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)"
+    },
+    {
+      "id": 7,
+      "category": 1,
+      "categoryName": "Чехол",
+      "preview": "./images/accessory/accessory-1.jpg",
+      "price": 290,
+      "name": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)"
+    },
+    {
+      "id": 8,
+      "category": 2,
+      "categoryName": "Умные часы",
+      "preview": "./images/usage/usage-1.jpg",
+      "price": 7490,
+      "name": "Amazfit GTS 4 mini (черный)"
+    },
+    {
+      "id": 9,
+      "category": 2,
+      "categoryName": "Умные часы",
+      "preview": "./images/usage/usage-1.jpg",
+      "price": 7490,
+      "name": "Amazfit GTS 4 mini (черный)"
+    },
+    {
+      "id": 10,
+      "category": 2,
+      "categoryName": "Умные часы",
+      "preview": "./images/usage/usage-1.jpg",
+      "price": 7490,
+      "name": "Amazfit GTS 4 mini (черный)"
+    },
+    {
+      "id": 11,
+      "category": 2,
+      "categoryName": "Умные часы",
+      "preview": "./images/usage/usage-1.jpg",
+      "price": 7490,
+      "name": "Amazfit GTS 4 mini (черный)"
+    }
+  ],
+  "cart": [
+    {
+      "id": 0,
+      "name": "Xiaomi Redmi A1+ 2/32GB (голубой)",
+      "count": "1",
+      "price": 4990
+    },
+    {
+      "id": 1,
+      "name": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
+      "count": "1",
+      "price": 290
+    }
+  ]
 }

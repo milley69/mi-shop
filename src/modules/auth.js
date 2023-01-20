@@ -7,7 +7,7 @@ export const authFunc = () => {
   let logoutBtn = document.querySelector('#logout-btn')
   let modal = document.querySelector('#auth-modal')
   let cartModal = document.querySelector('#cart-modal')
-  let closeAuthBtns = modal.querySelectorAll('.close-btn')
+  let closeBtns = modal.querySelectorAll('.close-btn')
   let loginBtn = modal.querySelector('.login-btn')
 
   function checkAuth() {
@@ -44,11 +44,7 @@ export const authFunc = () => {
   authBtn.addEventListener('click', () => {
     openModal(modal)
   })
-  closeAuthBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      closeModal(modal)
-    })
-  })
+
   loginBtn.addEventListener('click', () => {
     let loginInput = modal.querySelector('#login-control')
     let passwordInput = modal.querySelector('#password-control')
@@ -73,10 +69,6 @@ export const authFunc = () => {
     localStorage.removeItem('auth')
 
     logout()
-  })
-
-  openCartBtn.addEventListener('click', () => {
-    openModal(cartModal)
   })
 
   checkAuth()
