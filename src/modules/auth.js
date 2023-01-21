@@ -6,8 +6,8 @@ export const authFunc = () => {
   let openCartBtn = document.querySelector('#open-cart-btn')
   let logoutBtn = document.querySelector('#logout-btn')
   let modal = document.querySelector('#auth-modal')
-  let cartModal = document.querySelector('#cart-modal')
-  let closeBtns = modal.querySelectorAll('.close-btn')
+  // let cartModal = document.querySelector('#cart-modal')
+  // let closeBtns = modal.querySelectorAll('.close-btn')
   let loginBtn = modal.querySelector('.login-btn')
 
   function checkAuth() {
