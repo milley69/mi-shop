@@ -1,4 +1,4 @@
-import { getData } from './api'
+import { getData, postData } from './api'
 
 export const productsFunc = () => {
   let container = document.querySelector('#products-container')
@@ -28,7 +28,7 @@ export const productsFunc = () => {
                           class="col d-flex align-itemns-center justify-content-between"
                         >
                           <h4>${item.price} ₽</h4>
-                          <button type="button" class="btn btn-outline-dark">
+                          <button type="button" class="btn btn-outline-dark" data-product="${item.id}">
                             <img
                               src="./images/icon/shopping-cart-big.svg"
                               alt="login"
@@ -44,6 +44,28 @@ export const productsFunc = () => {
       )
     })
   }
+
+  container.addEventListener('click', (e) => {
+    if (e.target.closest('button')) {
+      const id = e.target.closest('button').dataset.product
+
+      getData(`products/${id}`)
+        .then((product) => {
+          // render(data)
+          postData('cart', {
+            name: product.name,
+            price: product.price,
+            count: 1,
+          }).then(() => {
+            console.log('all ok')
+          })
+        })
+        .catch((error) => {
+          console.error('404 (Not Found)')
+        })
+    }
+  })
+
   const init = () => {
     const params = window.location.search
     const urlSearchParams = new URLSearchParams(params)

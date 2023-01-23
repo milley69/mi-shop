@@ -2,8 +2,10 @@ import { getData } from './api'
 
 export const categoriesFunc = () => {
   let container = document.querySelector('#categories-container')
+  let catalogSearch = document.querySelector('.catalog-search')
 
   const render = (data) => {
+    container.innerHTML = ''
     data.forEach((item) => {
       container.insertAdjacentHTML(
         'beforeend',
@@ -26,6 +28,15 @@ export const categoriesFunc = () => {
       )
     })
   }
+  catalogSearch.addEventListener('input', (e) => {
+    getData(`categories?q=${e.target.value}`)
+      .then((data) => {
+        render(data)
+      })
+      .catch((error) => {
+        console.error('404 (Not Found)')
+      })
+  })
   getData('categories')
     .then((data) => {
       render(data)
