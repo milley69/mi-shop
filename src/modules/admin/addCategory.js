@@ -1,4 +1,4 @@
-import { postData, getData, deletData } from '../api'
+import { deletData, getData, postData } from '../api'
 
 export const addCategory = () => {
   const nameInp = document.querySelector('#category-name')
@@ -87,7 +87,10 @@ export const addCategory = () => {
   saveBtn.addEventListener('click', () => {
     postData('categories', {
       method: 'POST',
-      body: JSON.stringify(categoryData),
+      body: JSON.stringify({
+        name: `${nameInp.value}`,
+        preview: `${previewInp.value}`,
+      }),
       headers: {
         'Content-Type': 'application/json',
       },
